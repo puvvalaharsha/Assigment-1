@@ -1,0 +1,43 @@
+<!-- Radio Button and Check Box -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Radio Button and Check Box Demo</title>
+	</head>
+	<body>
+		<form>
+			<label for="DBMS Architecture">DBMS Architecture</label>
+			<input type="radio" id="DBMS Architecture" name="DBMS Architecture" value="1-Tier Architecture"/>1-Tier Architecture
+			<input type="radio" id="DBMS Architecture" name="DBMS Architecture" value="2-Tier Architecture"/>2-Tier Architecture
+			<br/><br/>
+
+			<button onclick="readData()">Submit</button>
+		</form>
+		<script>
+			function readData() {
+
+				var a = document.getElementsByName('DBMS Architecture');
+				for(i=0;i<a.length;i++) {
+					if(a[i].checked)
+						alert('1-Tier Architecture');
+					else
+						alert('2-Tier Architecture');
+				}
+			}
+		</script>
+		<p>
+			<h1>1-Tier Architecture</h1>
+			In this architecture, the database is directly available to the user. It means the user can directly sit on the DBMS and uses it.
+   			Any changes done here will directly be done on the database itself. It doesn't provide a handy tool for end users.
+			The 1-Tier architecture is used for development of the local application, where programmers can directly communicate with the database for the quick response.
+		</p>
+		<p>
+			<h2>2-Tier Architecture</h2>
+			The 2-Tier architecture is same as basic client-server. In the two-tier architecture, applications on the client end can directly communicate with the database at the server side. For this interaction, API's like: ODBC, JDBC are used.
+			The user interfaces and application programs are run on the client-side.
+			The server side is responsible to provide the functionalities like: query processing and transaction management.
+			To communicate with the DBMS, client-side application establishes a connection with the server side.
+		</p>
+	</body>
+</html>
