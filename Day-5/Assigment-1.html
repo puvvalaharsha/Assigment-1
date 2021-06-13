@@ -1,0 +1,36 @@
+<!-- Descendant Selector Demo -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Descendant Selector Demo</title>
+		<style>
+			div p {
+				background-color: purple;
+			}
+			::selection {
+				color: red;
+				
+			}
+			h2{
+				color: green;
+			}
+			h1{
+				color: darkorange;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Descendant Selector</h2>
+		<p>This is the demo of this combinator</p>
+		<div>
+			<h1>Debugging</h1>
+			<p>The core dump files contain the memory address space of a process that terminates unexpectedly. The creation of the core dump is triggered in response to program crashes by the kernel. The core dump files are used by the developers to find the program’s state at the time of its termination so that they can find out why the termination occurred.</p>
+			<p>In the event of a total system failure, the information about the state of the operating system is captured in crash dump files. There are three types of dump that can be captured when a system crashes. </p>
+			<p>The trace listing record information about a program execution using logging. This information is used by programmers for debugging. System administrators and technical personnel can use the trace listings to find the common problems with software using software monitoring tools.</p>
+		</div>
+		<p>The whole contents of the physical memory at the time of the system crash are captured in the complete memory dump. This is the default setting on the Windows Server System.</p>
+		<p>This memory dump contains the list of device drivers, stop code, process and thread information, kernel stack etc.</p>
+	</body>
+</html>
